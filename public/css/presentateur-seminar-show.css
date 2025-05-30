@@ -1,0 +1,218 @@
+/* Variables CSS modernes */
+:root {
+    --primary: #4f46e5;
+    --primary-hover: #4338ca;
+    --success: #10b981;
+    --success-hover: #059669;
+    --warning: #f59e0b;
+    --error: #ef4444;
+    --text-main: #1f2937;
+    --text-secondary: #4b5563;
+    --bg-light: #f9fafb;
+    --border-light: #e5e7eb;
+    --radius-lg: 0.5rem;
+    --radius-sm: 0.25rem;
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Structure principale */
+.seminar-detail-container {
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* Cartes de détail */
+.detail-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-light);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    transition: var(--transition);
+}
+
+.detail-card:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.detail-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-main);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border-light);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.detail-card h3::before {
+    content: "";
+    display: block;
+    width: 4px;
+    height: 1.25rem;
+    background: var(--primary);
+    border-radius: 2px;
+}
+
+/* Grille d'informations */
+.detail-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.detail-item {
+    margin-bottom: 1rem;
+}
+
+.detail-item label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.detail-item span, 
+.detail-item p {
+    color: var(--text-main);
+    font-weight: 500;
+}
+
+/* Contenu du résumé */
+.resume-content-show {
+    background: var(--bg-light);
+    padding: 1.25rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-light);
+    margin-top: 1rem;
+    line-height: 1.6;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Liste de fichiers */
+.file-list-show {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.file-list-show li {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    background: var(--bg-light);
+    border-radius: var(--radius-sm);
+    transition: var(--transition);
+}
+
+.file-list-show li:hover {
+    background: #f3f4f6;
+}
+
+.file-list-show a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--success);
+    font-weight: 500;
+}
+
+.file-list-show a:hover {
+    color: var(--success-hover);
+}
+
+/* Badges de statut */
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 9999px;
+}
+
+.status-published {
+    background: #e0e7ff;
+    color: #3730a3;
+}
+
+.status-validated {
+    background: #ffedd5;
+    color: #9a3412;
+}
+
+.status-rejected {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.status-default {
+    background: #f3f4f6;
+    color: var(--text-secondary);
+}
+
+/* Boutons */
+.action-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.625rem 1.25rem;
+    border-radius: var(--radius-sm);
+    font-weight: 500;
+    font-size: 0.875rem;
+    transition: var(--transition);
+    cursor: pointer;
+    gap: 0.5rem;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--primary-hover);
+}
+
+.btn-success {
+    background: var(--success);
+    color: white;
+}
+
+.btn-success:hover {
+    background: var(--success-hover);
+}
+
+/* Lien de retour */
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.back-link:hover {
+    color: var(--primary-hover);
+    text-decoration: underline;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.detail-card {
+    animation: fadeIn 0.3s ease-out forwards;
+}
+
+.detail-card:nth-child(2) { animation-delay: 0.1s; }
+.detail-card:nth-child(3) { animation-delay: 0.2s; }

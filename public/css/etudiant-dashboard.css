@@ -1,0 +1,248 @@
+/* resources/css/etudiant-dashboard.css */
+
+/* Layout de base */
+.dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.dashboard-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* En-tête */
+.dashboard-header {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2d3748;
+}
+
+/* Section Bienvenue */
+.welcome-section {
+    margin-bottom: 20px;
+
+}
+
+.welcome-card {
+    padding: 25px;
+    background: #4f46e5;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border: 1px solid #e2e8f0;
+}
+
+.welcome-title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #2d3748;
+}
+
+.welcome-subtitle {
+    font-size: 1rem;
+    color: #718096;
+    margin-top: 8px;
+}
+
+/* Sections Séminaires */
+.seminaire-section {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.seminaire-content {
+    padding: 20px;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+
+/* Formulaire de recherche */
+.search-form {
+    margin-bottom: 20px;
+}
+
+.search-group {
+    display: flex;
+    gap: 10px;
+}
+
+.search-input {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #a0aec0;
+}
+
+.search-button {
+    padding: 10px 20px;
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.search-button:hover {
+    background-color: #4338ca;
+}
+
+/* Liste des séminaires */
+.seminaire-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.seminaire-card {
+    padding: 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    transition: box-shadow 0.2s ease;
+}
+
+.seminaire-card:hover {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.seminaire-theme {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #4f46e5;
+    margin-bottom: 5px;
+}
+
+.seminaire-presentateur, 
+.seminaire-date {
+    font-size: 0.9rem;
+    color: #4a5568;
+    margin: 3px 0;
+}
+
+/* Résumé */
+.resume-container {
+    margin-top: 15px;
+}
+
+.resume-toggle {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 12px;
+    background-color: #e0e7ff;
+    color: #4f46e5;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    gap: 5px;
+}
+
+.resume-toggle:hover {
+    background-color: #c7d2fe;
+}
+
+.toggle-icon {
+    margin-right: 5px;
+}
+
+.resume-content {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f8fafc;
+    border-radius: 4px;
+    border: 1px solid #e2e8f0;
+}
+
+.resume-text {
+    white-space: pre-wrap;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.pdf-link {
+    display: inline-flex;
+    align-items: center;
+    color: #4f46e5;
+    text-decoration: none;
+    gap: 5px;
+}
+
+.pdf-link:hover {
+    text-decoration: underline;
+}
+
+/* Matériels */
+.materials-section {
+    margin-top: 10px;
+}
+
+.materials-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #4a5568;
+}
+
+.materials-list {
+    margin-top: 5px;
+    padding-left: 20px;
+}
+
+.material-item {
+    margin: 3px 0;
+}
+
+.material-link {
+    display: inline-flex;
+    align-items: center;
+    color: #38a169;
+    text-decoration: none;
+    font-size: 0.9rem;
+    gap: 5px;
+}
+
+.material-link:hover {
+    text-decoration: underline;
+}
+
+/* Messages d'absence de résultats */
+.no-result, 
+.no-materials, 
+.no-resume {
+    color: #718096;
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+/* Animation AlpineJS */
+[x-cloak] { display: none !important; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .dashboard-container {
+        padding: 15px;
+    }
+    
+    .search-group {
+        flex-direction: column;
+    }
+    
+    .welcome-title {
+        font-size: 1.5rem;
+    }
+}

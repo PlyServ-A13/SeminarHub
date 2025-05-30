@@ -1,0 +1,153 @@
+/* publics/css/seminars.css */
+
+/* Base Styles */
+:root {
+    --primary-color: #3182ce;
+    --primary-hover: #2c5282;
+    --secondary-color: #e2e8f0;
+    --text-color: #2d3748;
+    --light-text: #f7fafc;
+    --border-color: #cbd5e0;
+    --error-color: #0141f1;
+    --success-color: #48bb78;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --radius: 0.375rem;
+}
+
+/* Form Container */
+.form-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.header-title
+     {
+        font-size: 40px;
+     }
+
+/* Form Elements */
+form div {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"],
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.2);
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Button Styles */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+a.cancel-btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: var(--radius);
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+a.cancel-btn:hover {
+    background-color: #cbd5e0;
+}
+
+button.submit-btn {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--radius);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button.submit-btn:hover {
+    background-color: var(--primary-hover);
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+    .form-container {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+    
+    .button-group {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    a.cancel-btn,
+    button.submit-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Validation States */
+input:invalid, textarea:invalid {
+    border-color: var(--error-color);
+}
+
+input:valid, textarea:valid {
+    border-color: #a0aec0;
+}
+
+/* Header Style */
+.header-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: 0.025em;
+}
+
+/* Optional Field Indicator */
+.optional-field::after {
+    content: " (Optionnel)";
+    font-weight: normal;
+    color: #718096;
+    font-size: 0.875rem;
+}
